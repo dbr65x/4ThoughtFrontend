@@ -41,17 +41,19 @@ export default function HomeScreen(props){
         <NavbarComp />
     <div className='homeStyle' >
   
-      <div style={{width:'50%'}}>
+      <div style={{width:'50%',marginLeft:'5%'}}>
          <FadeIn delay={'100'} transitionDuration={'1200'}>
           <CardComp 
+            br={'20rem'}
             color= '#7396EF'
             title="Political Group 1"
             image="https://images.unsplash.com/photo-1618710250233-dd515c3415ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2187&q=80" /> 
          </FadeIn>
       </div>
-      <div style={{width:'50%',alignSelf:'flex-end'}}>
+      <div style={{width:'50%',marginRight:'8%',alignSelf:'flex-end'}}>
          <FadeIn delay={'350'} transitionDuration={'1000'}>
            <CardComp  
+             br={'20rem'}
              color='#DA2A2A' 
              title="Political Group 2" 
              image="https://images.unsplash.com/photo-1569285645462-a3f9c6332d56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /> 
@@ -68,10 +70,9 @@ export default function HomeScreen(props){
           className='inputBox' >
         </Input>    
       </FadeIn>
-
-        <div>
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
           <Button
-    style={{marginLeft:'30%'}}onClick={()=>{ sendToBackend()}}>Explore
+    style={{alignSelf:'center',marginTop:'5%',backgroundColor:'#C4DEF6'}}onClick={()=>{ sendToBackend()}}>Explore
         </Button>
         </div>
         {showResponse ? 
@@ -81,18 +82,20 @@ export default function HomeScreen(props){
         }
       </div>
       
-      <div style={{width:'50%'}}>
+      <div style={{width:'50%',marginLeft:'4%'}}>
          <FadeIn delay={'350'} transitionDuration={'1000'}>
           <CardComp 
+            br={'20rem'}
             color='#7396EF' 
             title="Political Group 1" 
             image="https://images.unsplash.com/photo-1591622180684-b96c52ef3908?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /> 
          </FadeIn>
       </div>
       
-       <div style={{width:'50%',alignSelf:'flex-end'}}>
+       <div style={{width:'50%',marginRight:'5%',marginBottom:'5%',alignSelf:'flex-end'}}>
         <FadeIn delay={'1000'} transitionDuration={'1200'}>
          <CardComp 
+           br={'20rem'}
            color='#DA2A2A' 
            title="Political Group 2" 
            image="https://images.unsplash.com/photo-1504163598380-5a8ea881897f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80" /> 

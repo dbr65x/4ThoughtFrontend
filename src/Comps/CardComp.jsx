@@ -22,11 +22,13 @@ export default function CardComp(props) {
         src={props.image}
         alt="image"
       />
-    <div style={{display:'flex',fontFamily:'Roboto',flexDirection:'column',alignContent:'center',justifyContent:'center',height:'7rem',backgroundColor:props.color,fontSize:'15px'}}>
-      {props.content}
+     
+    <div style={{display:'flex',fontFamily:'Roboto',flexDirection:'column',alignContent:'center',justifyContent:'center',height:'7rem',backgroundColor:props.color,fontSize:'12px'}}>
+     <p style={{marginTop:'10%',marginLeft:'-0.7rem'}}> {props.content}</p>
       {props.buttoner &&
         <Button onClick={()=>window.location.href = props.content}>Read More </Button>}
     </div>
+   
 
     </Card>
   );

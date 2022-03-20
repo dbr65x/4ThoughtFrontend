@@ -58,7 +58,7 @@ export default function LeftView(props){;
         alignSelf:'flex-end',
         paddingRight:'10px',
         paddingLeft:'10px',
-      }}> It appears to be skewed to the left!} </p>
+      }}> It appears to be skewed to the left!</p>
       </div>
     </FadeIn>
   <p 
@@ -68,7 +68,7 @@ export default function LeftView(props){;
     <div style={{width:'55%',margin:'3%'}}>
       <CardComp 
       buttoner={true}
-      br={"10rem"}
+      br={"2rem"}
       content={apiReturnData}
       image={'https://images.unsplash.com/photo-1600397056857-a828ff06ff29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80'} />
     </div>
@@ -78,7 +78,7 @@ export default function LeftView(props){;
     <div style={{width:'55%',marginLeft:'45%'}}>
       <CardComp
         buttoner={true}
-        br={"10rem"}
+        br={"2rem"}
         content={apiReturnData2}
         image={'https://images.unsplash.com/photo-1548003765-e4c3b57740a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'} />
     </div>
@@ -88,7 +88,7 @@ export default function LeftView(props){;
     <div style={{width:'55%',margin:'3%'}}>
       <CardComp 
         buttoner={true}
-        br={"10rem"}
+        br={"2rem"}
         content={apiReturnData3}
         image={'https://images.unsplash.com/photo-1616984855875-d0be5f06706a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'} />
     </div>
