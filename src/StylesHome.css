@@ -1,0 +1,21 @@
+.homeStyle {
+  background-color: #FAFAFB;
+  height: 100%;
+  width: 100%;
+  overflow:'hidden';
+  padding-top:45px;
+  display:flex;
+  flex-grow:1;
+  flex-direction:column;
+
+}
+
+.inputBox {
+  background-color:white;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  border-bottom-color:white;
+  width:90%;
+  margin-left:5%;
+  padding-left:10px;
+}
