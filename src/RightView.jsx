@@ -11,21 +11,27 @@ import {
 } from "react-router-dom";
 export default function RightView(props){;
   const [apiReturnData, setApiReturnData] = React.useState(null)
+  const [apiReturnData2, setApiReturnData2] = React.useState(null)
+  const [apiReturnData3, setApiReturnData3] = React.useState(null)
   const [themeSetting, setThemeSetting] = React.useState('right')
   const [temp, setTemp] = React.useState(null)
   // Base url for api call
   const API_BASE_URL = "https://4thought-backend.egrep6021ad.repl.co"
-  // "When the page renders...(mounts)", it queries the backend for the classification 
-//  const location = useLocation()
-  //const {fromDashboard} = location.state
-                                                
+  // "When the page renders...(mounts)", it queries the backend
  useEffect( async() => {
    await axios.get(API_BASE_URL+"/getArticles")
      .then((response)=>
-      setApiReturnData(response.data)
+      setApiReturnData(response.data[0])
      ).catch((e)=>console.log(e))
-  },[console.log(apiReturnData)])
-
+  await axios.get(API_BASE_URL+"/getArticles")
+     .then((response)=>
+      setApiReturnData2(response.data[1])
+     ).catch((e)=>console.log(e))
+  await axios.get(API_BASE_URL+"/getArticles")
+     .then((response)=>
+      setApiReturnData3(response.data[2])
+     ).catch((e)=>console.log(e))
+ },[console.log(apiReturnData + apiReturnData2, apiReturnData3)])
   return (
     <div>
     <NavbarComp />
@@ -64,8 +70,9 @@ export default function RightView(props){;
   <FadeIn delay={'300'} transitionDuration={'1200'}>
     <div style={{width:'55%',margin:'3%'}}>
       <CardComp 
+      buttoner={true}
       br={"10rem"}
-      content={ "other sdddide"}
+      content={ apiReturnData}
       image={'https://images.unsplash.com/photo-1610066708549-172ce5ba357e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'} />
     </div>
   </FadeIn>
@@ -73,8 +80,9 @@ export default function RightView(props){;
   <FadeIn delay={'500'} transitionDuration={'1200'}>
     <div style={{width:'55%',marginLeft:'45%'}}>
       <CardComp
+        buttoner={true}
         br={"10rem"}
-        content={ "other side"}
+        content={ apiReturnData2}
         image={'https://images.unsplash.com/photo-1570179538662-faa5e38e9d8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80'} />
     </div>
   </FadeIn>
@@ -82,8 +90,9 @@ export default function RightView(props){;
   <FadeIn delay={'700'} transitionDuration={'1200'}>
     <div style={{width:'55%',margin:'3%'}}>
       <CardComp 
+        buttoner={true}
         br={"10rem"}
-        content={themeSetting==='left'? "Summary about aricleary about article one thary about article one th three that was returned" : "other side"}
+        content={apiReturnData3}
         image={'https://images.unsplash.com/photo-1554418651-70309daf95f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'} />
     </div>
   </FadeIn>

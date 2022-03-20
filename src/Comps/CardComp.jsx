@@ -10,6 +10,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Button from '@mui/material/Button';
 import './StylesCards.css';
 export default function CardComp(props) {
 
@@ -19,11 +20,13 @@ export default function CardComp(props) {
         component="img"
         height="120"
         src={props.image}
-        alt="Political Protest"
+        alt="image"
       />
-    <CardContent style={{backgroundColor:props.color,fontSize:'12px'}}>
+    <div style={{display:'flex',fontFamily:'Roboto',flexDirection:'column',alignContent:'center',justifyContent:'center',height:'7rem',backgroundColor:props.color,fontSize:'15px'}}>
       {props.content}
-    </CardContent>
+      {props.buttoner &&
+        <Button onClick={()=>window.location.href = props.content}>Read More </Button>}
+    </div>
 
     </Card>
   );
